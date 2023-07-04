@@ -1,0 +1,48 @@
+<!-- Este espacio es para modelar  renderizar tus el Layout de tus POSTS -->
+
+<!-- Ejemplo -->
+<!-- 
+
+
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import Header from '../../components/Header.astro';
+import Firma from "../../components/Firma.astro";
+import {getCollection} from "astro:content";
+
+const todoPost = (await getCollection("tips")).sort(
+    (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<Header
+			title = "Bienvenidos"
+			span="a mis componentes"
+		/>
+		<ul role="list" class="link-card-grid">
+			{
+				todoPost.map(i => (
+					<Card
+					tags={i.data.etiqueta}
+					title={i.data.title}
+					time={i.data.pubDate}
+					slug={i.slug}
+					/>
+				))
+			}
+		</ul>
+		<Firma nombre="Jose Tomas Mendoza Puentes" corazon="♥"/>
+	</main>
+</Layout>
+
+<style>
+	
+    // Aqui los estilos no son muy relevantes ya que los intregarias con Tailwinds
+
+</style>
+
+
+ -->

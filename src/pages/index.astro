@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+// import { getCollection } from 'astro:content';
+
+/* 
+
+const todoPost = (await getCollection("tips")).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+*/
+---
+
+<Layout title="Welcome to Astro.">
+		<Hero
+			title = "Comienza a programar"
+			span="Siente a gusto hacer las modificaciones según tu necesidad"
+            etiqueta='Hecho con cariño por Lenin y José Tomas Mendoza '
+            corazon="♥"
+		/>
+    <!-- <ul role="list" class="link-card-grid">
+        Esta parte es para iterar en los post
+            
+            {
+            todoPost.map(i => (
+                <Card
+                tags={i.data.etiqueta}
+                title={i.data.title}
+                time={i.data.pubDate}
+                slug={i.slug}
+                />
+            ))
+        }
+    </ul> -->
+</Layout>
+
