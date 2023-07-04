@@ -9,6 +9,6 @@ npm install
 
 
 ## 🚀 Todo hecho con cariño para que empieces a programar de una...
-##### Hecho con cariño y decicación por Lenin y Jose Tomas Mendoza ♥
+##### Hecho con cariño y dedicación por Lenin y Jose Tomas Mendoza ♥
 
 
