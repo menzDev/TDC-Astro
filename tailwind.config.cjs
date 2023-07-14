@@ -3,7 +3,13 @@ module.exports = {
     theme: {
         extend: {
 
+        },
+        fontFamily: {
+            'sg': ['Space Grotesk', 'sans-serif']
         }
     },
-    plugins: [require('@tailwindcss/line-clamp')]
+    plugins: [
+        require('@tailwindcss/line-clamp'),
+        require('@tailwindcss/forms'),
+    ]
 }

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import Form from '../components/Form.astro';
 // import { getCollection } from 'astro:content';
 
 /* 
@@ -10,14 +11,17 @@ const todoPost = (await getCollection("tips")).sort(
 );
 */
 ---
-
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+  </style>
 <Layout title="Welcome to Astro.">
-		<Hero
+    <Form/>
+<!-- 		<Hero
 			title = "Comienza a programar"
 			span="Siente a gusto hacer las modificaciones según tu necesidad"
             etiqueta='Hecho con cariño por Lenin y José Tomas Mendoza '
             corazon="♥"
-		/>
+		/> -->
     <!-- <ul role="list" class="link-card-grid">
         Esta parte es para iterar en los post
             

@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--violeta-claro: #dbbafc;
+	--violeta-medio: #8e8593;
+	--violeta-oscuro: #21092f;
+	--gradient: #6448fe to #600594;
+	--error: #ff5252;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
