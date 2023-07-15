@@ -1,16 +1,65 @@
 ---
-
 ---
-<form class="flex justify-center flex-col items-center ml-[200px] mt-20 ">
-  <div class="flex justify-center flex-col items-center w-[385px] h-[45px] rounded-[20px] font-sg mb-[45px] ml-5">
-    <label for="card">CARDHOLDER NAME</label>
-    <input id = "card" type="text" class="rounded border border-[#600594]" />
-  </div>
-  <div class="flex justify-center flex-col items-center w-[385px] h-[45px] rounded-[20px] font-sg ml-5 mb[45px]" >
-    <label for="card">CARD NUMBER</label>
-    <input id = "card" type="text" class="rounded border border-[#600594] r" />
+
+<body class="w-[100vw] h-[100vh] flex justify-center items-center">
+	<form class="flex justify-center flex-col items-center w-[382px] h-[388px]">
+		<div
+			class="flex justify-center flex-col items-center w-full h-full rounded-[20px] font-sg"
+		>
+			<label class="w-full" for="card">CARDHOLDER NAME</label>
+			<input
+				id="card"
+				type="text"
+				class="rounded border border-[#600594 w-full h-[48px]"
+        placeholder="CARDHOLDER NAME"
+			/>
+		</div>
+		<div
+			class="flex justify-center flex-col items-center w-full h-full rounded-[20px] font-sg"
+		>
+			<label class="w-full" for="card">CARD NUMBER</label>
+			<input
+				id="card"
+				type="number"
+				class="rounded border border-[#600594 w-full h-[48px]"
+        placeholder="CARD NUMBER"
+			/>
+		</div>
+    <div class="flex gap-x-2">
+      <div
+      class="flex justify-center flex-col items-center w-[25%] h-full rounded-[20px] font-sg"
+        >
+      <label class="w-full" for="card">EXP DATE</label>
+      <input
+        id="card"
+        type="text"
+        class="rounded border border-[#600594 w-full h-[48px]"
+        placeholder="EXP DATE"
+      />
+        </div>
+        <div
+        class="flex justify-center flex-col items-center w-[25%] h-full rounded-[20px] font-sg"
+      >
+        <label class="w-full" for="card">(MM/YY)</label>
+        <input
+      id="card"
+      type="text"
+      class="rounded border border-[#600594 w-full h-[48px]"
+      placeholder="(MM/YY)"
+        />
+      </div>
+      <div
+      class="flex justify-center flex-col items-center w- h-full rounded-[20px] font-sg mb-5"
+      >
+      <label class="w-full" for="card">CVC</label>
+      <input
+        id="card"
+        type="text"
+        class="rounded border border-[#600594 w-full h-[48px]"
+        placeholder="CVC"
+      />
+      </div>
     </div>
-    <div class="flex justify-center flex-col items-center w-[385px] h-[45px] rounded-[20px] font-sg ml-5" >
-      <label for="card">CARD NUMBER</label>
-      <input id = "card" type="text" class="rounded border border-[#600594] r" />
-    </form>
+    <button class="bg-black text-white rounded-md w-[382px] h-[155px]">Confirm</button>
+	</form>
+</body>
