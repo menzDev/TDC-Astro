@@ -8,10 +8,10 @@
 		>
 			<label class="w-full" for="card">CARDHOLDER NAME</label>
 			<input
-				id="card"
+				id="cardName"
 				type="text"
 				class="rounded border border-[#600594 w-full h-[48px]"
-        placeholder="CARDHOLDER NAME"
+				placeholder="CARDHOLDER NAME"
 			/>
 		</div>
 		<div
@@ -19,47 +19,116 @@
 		>
 			<label class="w-full" for="card">CARD NUMBER</label>
 			<input
-				id="card"
-				type="number"
+				id="cardNumber"
+				type="text"
 				class="rounded border border-[#600594 w-full h-[48px]"
-        placeholder="CARD NUMBER"
+				placeholder="CARD NUMBER"
+				maxlength="19"
 			/>
 		</div>
-    <div class="flex gap-x-2">
-      <div
-      class="flex justify-center flex-col items-center w-[25%] h-full rounded-[20px] font-sg"
-        >
-      <label class="w-full" for="card">EXP DATE</label>
-      <input
-        id="card"
-        type="text"
-        class="rounded border border-[#600594 w-full h-[48px]"
-        placeholder="EXP DATE"
-      />
-        </div>
-        <div
-        class="flex justify-center flex-col items-center w-[25%] h-full rounded-[20px] font-sg"
-      >
-        <label class="w-full" for="card">(MM/YY)</label>
-        <input
-      id="card"
-      type="text"
-      class="rounded border border-[#600594 w-full h-[48px]"
-      placeholder="(MM/YY)"
-        />
-      </div>
-      <div
-      class="flex justify-center flex-col items-center w- h-full rounded-[20px] font-sg mb-5"
-      >
-      <label class="w-full" for="card">CVC</label>
-      <input
-        id="card"
-        type="text"
-        class="rounded border border-[#600594 w-full h-[48px]"
-        placeholder="CVC"
-      />
-      </div>
-    </div>
-    <button class="bg-black text-white rounded-md w-[382px] h-[155px]">Confirm</button>
+		<div class="flex gap-x-2">
+			<div
+				class="flex justify-center flex-col items-center w-[25%] h-full rounded-[20px] font-sg"
+			>
+				<label class="w-full" for="card">EXP DATE</label>
+				<input
+					id="cardMonth"
+					type="text"
+					class="rounded border border-[#600594 w-full h-[48px]"
+					placeholder="MM"
+					maxlength="2"
+				/>
+			</div>
+			<div
+				class="flex justify-center flex-col items-center w-[25%] h-full rounded-[20px] font-sg"
+			>
+				<label class="w-full" for="card">(MM/YY)</label>
+				<input
+					id="cardYear"
+					type="text"
+					class="rounded border border-[#600594 w-full h-[48px]"
+					placeholder="YY"
+					maxlength="2"
+				/>
+			</div>
+			<div
+				class="flex justify-center flex-col items-center w- h-full rounded-[20px] font-sg mb-5"
+			>
+				<label class="w-full" for="card">CVC</label>
+				<input
+					id="cardCVC"
+					type="text"
+					class="rounded border border-[#600594 w-full h-[48px]"
+					placeholder="123"
+					maxlength="3"
+				/>
+			</div>
+		</div>
+		<button class="bg-black text-white rounded-md w-[382px] h-[155px]"
+			>Confirm</button
+		>
 	</form>
 </body>
+
+<script>
+	const cardNumber = document.querySelector('#cardNumber')
+	const number = document.querySelector('#number')
+
+	cardNumber.addEventListener('input', (e) => {
+		if (e.target.value.length === 0) {
+			number.innerHTML = '9591 6489 6389 1013'
+		} else {
+			cardNumber.value = cardNumber.value.replace(/[^0-9]/g, '')
+			// Elimina los espacios existentes
+			cardNumber.value = cardNumber.value.replace(/\s/g, '')
+
+			// Agrega un espacio después de cada cuarto dígito
+			cardNumber.value = cardNumber.value.replace(/(\d{4})/g, '$1 ').trim()
+
+			number.innerHTML = e.target.value
+		}
+	})
+
+	const cardName = document.querySelector('#cardName')
+	const name = document.querySelector('#name')
+
+	cardName.addEventListener('input', (e) => {
+		if (e.target.value.length === 0) {
+			name.innerHTML = 'JOSE MENDOZA'
+		} else {
+			name.innerHTML = e.target.value.toUpperCase()
+		}
+	})
+
+	const fechaMes = document.querySelector('#fechaMes')
+	const fechaAno = document.querySelector('#fechaAno')
+	/* const fechas = document.querySelector("#fechas"); */
+	const cardMonth = document.querySelector('#cardMonth')
+	const cardYear = document.querySelector('#cardYear')
+
+	cardMonth.addEventListener('input', (e) => {
+		if (e.target.value.length === 0) {
+			fechaMes.innerHTML = '09'
+		} else {
+			fechaMes.innerHTML = e.target.value
+		}
+	})
+	cardYear.addEventListener('input', (e) => {
+		if (e.target.value.length === 0) {
+			fechaAno.innerHTML = '23'
+		} else {
+			fechaAno.innerHTML = e.target.value
+		}
+	})
+
+	const cardCVC = document.querySelector('#cardCVC')
+	const cvc = document.querySelector('#cvc')
+
+	cardCVC?.addEventListener('input', (e) => {
+		if (e.target.value.length === 0) {
+			cvc.innerHTML = '123'
+		} else {
+			cvc.innerHTML = e.target.value
+		}
+	})
+</script>
